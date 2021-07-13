@@ -1,40 +1,44 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import Display from './components/Display/Display'
 import Controller from './components/Controller/Controller'
-import useEvent from './utility/useEvent'
+import useEvent from './hooks/useEvent'
 
 const App = (props) => {
-  //. I want to put the keysPressed state into the Controller component and keep the active key actions in this component only
+  //. I want to put the keysPressed state into the Controller component and keep the active key actions (up, down, left, right, etc) in this component only
 
-  // this will record the keys that are pressed in an array
-  const [keysPressed, setKeysPressed] = useState([])
+  // this will record the keys that are currently being pressed in an array
+  // const [keysPressed, setKeysPressed] = useState([])
 
+  // const [activeInputs, setActiveInputs] = useState({
+  //   up: false, down: false, left: false, right: false
+  // })
 
-  const onKeyDown = event => {
-    // checks if the button is already being held down to prevent unnecessarily re-rendering the components and re-adding event listeners
-    if (event.repeat) return
+  // const onKeyDown = event => {
+  //   // checks if the button is already being held down to prevent unnecessarily re-rendering the components and re-adding event listeners
+  //   if (event.repeat) return
 
-    setKeysPressed((prevState) => {
-      return [...prevState, event.code]
-    })
-  }
+  //   setKeysPressed((prevState) => {
+  //     return [...prevState, event.code]
+  //   })
+  // }
 
-  const onKeyUp = event => {
-    // remove the key from the keysPressed array
-    setKeysPressed((prevState) => {
-      return prevState.filter(key => key !== event.code)
-    })
-  }
+  // const onKeyUp = event => {
+  //   // remove the key from the keysPressed array
+  //   setKeysPressed((prevState) => {
+  //     return prevState.filter(key => key !== event.code)
+  //   })
+  // }
 
-  useEvent('keydown', onKeyDown)
-  useEvent('keyup', onKeyUp)
+  // useEvent('keydown', onKeyDown)
+  // useEvent('keyup', onKeyUp)
 
-  console.log('keysPressed:', keysPressed)
   return (
     <Fragment>
-      <Display />
       <Controller
-        keysPressed={keysPressed}
+        // keysPressed={keysPressed}
+      />
+      <Display
+        // activeInputs={activeInputs}
       />
     </Fragment>
   )

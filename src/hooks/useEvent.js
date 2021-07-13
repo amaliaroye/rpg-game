@@ -11,7 +11,7 @@ export default function useEvent (event, handler) {
     // initiate the event handler
     window.addEventListener(event, handler)
 
-    // this will clean up the event every time the component is re-rendered
+    // this will clean up the event every time the component is re-rendered to prevent memory leaks
     return function cleanup() {
       window.removeEventListener(event, handler)
     }

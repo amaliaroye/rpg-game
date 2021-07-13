@@ -27,7 +27,8 @@ const Gamepad = styled.div`
 const Icon = styled(FontAwesomeIcon)`
   /* Ternary operator to change the color when the button is active */
   grid-area: ${props => props.grid};
-  color: ${props => props.active ? colors.white : colors.index30};
+  /* color: ${props => props.active ? colors.white : colors.bg}; */
+  color: ${colors.bg};
   background: ${props => props.active ? colors.white : colors.index40};
   height: 3rem !important;
   width: 3rem !important;
@@ -35,8 +36,6 @@ const Icon = styled(FontAwesomeIcon)`
 `
 
 const ControllerDisplay = (props) => {
-  // activeKeys will be an object? or an array?
-  const activeKeys = props.activeKeys
 
   return (
     <div>
@@ -44,6 +43,7 @@ const ControllerDisplay = (props) => {
         <Icon
           icon="caret-up"
           grid="up"
+          // active={props.activeInputs.up ? 'active' : ''}
         />
         <Icon
           icon="caret-left"

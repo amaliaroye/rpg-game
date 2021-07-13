@@ -1,5 +1,5 @@
 import React from 'react'
-import useCanvas from '../../utility/useCanvas'
+import useCanvas from '../../hooks/useCanvas'
 import { world, colors } from '../../data/Variables'
 import ControllerDisplay from './ControllerDisplay'
 
@@ -25,7 +25,7 @@ const Display = (props) => {
       >
       </canvas>
 
-      <ControllerDisplay />
+      <ControllerDisplay activeInputs={props.activeInputs} />
     </div>
   )
 }

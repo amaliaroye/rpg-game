@@ -26,11 +26,11 @@ A 2D RPG game created in React.
 Inspired by [react-game-kit](https://github.com/formidablelabs/react-game-kit)
 [React Game Kit Repo](https://github.com/formidablelabs/react-game-kit)
 
-### `<Stage />`
+#### `<Stage />`
 
-### `<World />`
+#### `<World />`
 
-### `<Tilemap />`
+#### `<Tilemap />`
 **columns** (number): number of columns in tilemap
 **rows** (number): number of rows in tilemap
 **width** (number)
@@ -55,9 +55,9 @@ layers={[
 ---
 
 ## Custom Hooks
-### `useEvent`
+#### `useEvent`
 
-### `useCanvas`
+#### `useCanvas`
 
 ## File Structure
 src
@@ -75,65 +75,6 @@ src
   + Card
   + Input
 + components
-
-
-## Atomic File Structure
-[styled-components](https://stackoverflow.com/questions/42987939/styled-components-organization)
-
-Atom: a native html tag element
-```jsx
-const Input = props => <input {...props} />
-```
-
-Molecules: a group of atoms
-```jsx
-const Field = ({ label, ...inputProps }) => (
-  <Label>
-        {label}
-        <Input {...inputProps} />
-    </Label>
-)
-```
-
-Organisms: a group of molecules and/or other organisms
-```jsx
-const Form = (props) => (
-  <form {...props}>
-        <Field label="Name" type="text" />
-        <Field label="Email" type="email" />
-    </form>
-)
-```
-
-Pages:
-```jsx
-const HomePage = () => (
-  <PageTemplate header={<Header />}>
-        <Form />
-    </PageTemplate>
-)
-```
-
-Templates:
-```jsx
-const PageTemplate = ({ header, children }) => (
-  <main>
-        {header && <div>{header}</div>}
-        {children}
-    </main>
-)
-```
-
-## Vocabulary is Hard
-#### Nouns:
-action direction motion boundingBox collision
-buttonInput keyPress
-
-#### Verbs:
-draw render display collide activate
-
-#### Adjectives:
-active
 
 
 ## Reference
