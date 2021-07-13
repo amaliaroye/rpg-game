@@ -33,7 +33,7 @@ const Controller = (props) => {
     if (keysPressed.includes('ArrowRight' || 'KeyD')) {activeInputs.push('right')}
 
     setActiveInputs(activeInputs)
-  }, [keysPressed])
+  }, [keysPressed, setActiveInputs])
 
   return (
     ''

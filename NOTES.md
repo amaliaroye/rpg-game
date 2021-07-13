@@ -5,6 +5,7 @@
 ## Vocabulary is Hard
 #### Nouns:
 action direction motion boundingBox collision
+entity
 buttonInput keyPress
 
 #### Verbs:

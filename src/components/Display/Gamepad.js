@@ -4,7 +4,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../Variables'
+import { colors } from '../../variables'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ControllerGrid = styled.div`

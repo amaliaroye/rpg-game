@@ -1,25 +1,32 @@
 import React from 'react'
 import useCanvas from '../../hooks/useCanvas'
-import { world, colors } from '../../Variables'
+import { canvas, colors, player } from '../../variables'
 
 const Canvas = (props) => {
 
   const render = (context) => {
-    context.clearRect(0, 0, world.width, world.height)
+    if(!context) return
+    // clear the canvas on every render
+    context.clearRect(0, 0, canvas.width, canvas.height)
 
-    // background
+    // background fill
     context.fillStyle = colors.index29
-    context.fillRect(0, 0, world.width, world.height)
+    context.fillRect(0, 0, canvas.width, canvas.height)
+
+    // player fill
+    context.fillStyle = player.color
+    context.fillRect(props.x, props.y, player.width, player.height)
   }
 
+  // `useCanvas` is a custom hook that is passed in a render/draw function and returns a canvas context
   const context = useCanvas(render)
 
   return (
       <canvas
         id="canvas"
         ref={context}
-        width={world.width}
-        height={world.height}
+        width={canvas.width}
+        height={canvas.height}
       >
       </canvas>
   )

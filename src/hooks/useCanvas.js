@@ -22,8 +22,7 @@ const useCanvas = render => {
     }
     draw()
 
-    // cleanup function
-    return () => {
+    return function cleanup() {
       window.cancelAnimationFrame(animationFrameId)
     }
   },[render])
