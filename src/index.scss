@@ -1,0 +1,22 @@
+$index30: #242234;
+$index37: #dae0ea;
+$index38: #b3b9d1;
+$index40: #6d758d;
+$index49: #b9bffb;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background: $index30;
+}
