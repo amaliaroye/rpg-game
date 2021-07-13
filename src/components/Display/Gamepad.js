@@ -4,10 +4,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../data/Variables'
+import { colors } from '../../Variables'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Gamepad = styled.div`
+const ControllerGrid = styled.div`
   font-size: 3rem;
 	margin: .1em;
 	display: grid;
@@ -35,31 +35,33 @@ const Icon = styled(FontAwesomeIcon)`
   border-radius: .125em;
 `
 
-const ControllerDisplay = (props) => {
-
+const Gamepad = ({activeInputs}) => {
   return (
     <div>
-      <Gamepad>
+      <ControllerGrid>
         <Icon
           icon="caret-up"
           grid="up"
-          // active={props.activeInputs.up ? 'active' : ''}
+          active={activeInputs.includes('up') ? 'active' : ''}
+          />
+        <Icon
+          icon="caret-down"
+          grid="down"
+          active={activeInputs.includes('down') ? 'active' : ''}
         />
         <Icon
           icon="caret-left"
           grid="left"
-        />
+          active={activeInputs.includes('left') ? 'active' : ''}
+          />
         <Icon
           icon="caret-right"
           grid="right"
-        />
-        <Icon
-          icon="caret-down"
-          grid="down"
-        />
-      </Gamepad>
+          active={activeInputs.includes('right') ? 'active' : ''}
+          />
+      </ControllerGrid>
     </div>
   )
 }
 
-export default ControllerDisplay
+export default Gamepad

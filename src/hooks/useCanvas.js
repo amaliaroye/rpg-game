@@ -1,5 +1,5 @@
 /*
-  `useCanvas` is a custom hook that takes in a `render` callback function and returns the canvasRef
+`useCanvas` is a custom hook that takes in a `render` callback function and returns the canvasRef
 */
 
 import { useRef, useEffect } from 'react'
