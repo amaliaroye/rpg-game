@@ -8,6 +8,10 @@ import { colors } from '../../variables'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ControllerGrid = styled.div`
+  opacity: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
   font-size: 3rem;
 	margin: .1em;
 	display: grid;
@@ -37,30 +41,28 @@ const Icon = styled(FontAwesomeIcon)`
 
 const Gamepad = ({activeInputs}) => {
   return (
-    <div>
-      <ControllerGrid>
-        <Icon
-          icon="caret-up"
-          grid="up"
-          active={activeInputs.includes('up') ? 'active' : ''}
-          />
-        <Icon
-          icon="caret-down"
-          grid="down"
-          active={activeInputs.includes('down') ? 'active' : ''}
+    <ControllerGrid>
+      <Icon
+        icon="caret-up"
+        grid="up"
+        active={activeInputs.includes('up') ? 'active' : ''}
         />
-        <Icon
-          icon="caret-left"
-          grid="left"
-          active={activeInputs.includes('left') ? 'active' : ''}
-          />
-        <Icon
-          icon="caret-right"
-          grid="right"
-          active={activeInputs.includes('right') ? 'active' : ''}
-          />
-      </ControllerGrid>
-    </div>
+      <Icon
+        icon="caret-down"
+        grid="down"
+        active={activeInputs.includes('down') ? 'active' : ''}
+      />
+      <Icon
+        icon="caret-left"
+        grid="left"
+        active={activeInputs.includes('left') ? 'active' : ''}
+        />
+      <Icon
+        icon="caret-right"
+        grid="right"
+        active={activeInputs.includes('right') ? 'active' : ''}
+        />
+    </ControllerGrid>
   )
 }
 

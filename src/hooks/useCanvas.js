@@ -1,5 +1,7 @@
 /*
 `useCanvas` is a custom hook that takes in a `render` callback function and returns the canvasRef
+
+https://betterprogramming.pub/add-an-html-canvas-into-your-react-app-176dab099a79
 */
 
 import { useRef, useEffect } from 'react'

@@ -28,6 +28,6 @@ export const player = {
 }
 
 export const constants = {
-  speed: tileSize * 1,
+  speed: 1,
   velocity: scale * 1,
 }

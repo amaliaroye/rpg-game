@@ -1,3 +1,7 @@
+/*
+  This component handles Player movement on the canvas
+*/
+
 import React, { useState, useEffect } from 'react'
 import { constants } from '../../variables'
 
@@ -18,7 +22,7 @@ const Player = (props) => {
     if (activeInputs.includes('down')) {setY(y => y+speed)}
     if (activeInputs.includes('left')) {setX(x => x-speed)}
     if (activeInputs.includes('right')) {setX(x => x+speed)}
-  },[activeInputs, speed])
+  })
 
 
   return (

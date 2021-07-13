@@ -13,7 +13,8 @@ src
   - assets: images and fonts
   - components: game components
     - Controller: handles user input
-    - Game: handles game logic
+    - Game: handles game logic and data
+      - CollisionMap
     - Display: handles rendering the canvas
       - Canvas
 
