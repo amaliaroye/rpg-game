@@ -4,11 +4,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../variables'
+import { colors } from '../../data/variables'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ControllerGrid = styled.div`
-  opacity: 50%;
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -34,6 +33,7 @@ const Icon = styled(FontAwesomeIcon)`
   /* color: ${props => props.active ? colors.white : colors.bg}; */
   color: ${colors.bg};
   background: ${props => props.active ? colors.white : colors.index40};
+  opacity: ${props => props.active ? '100%' : '40%'};
   height: 3rem !important;
   width: 3rem !important;
   border-radius: .125em;

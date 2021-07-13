@@ -1,7 +1,7 @@
 import React from 'react'
 import Gamepad from './Gamepad'
 import Background from './Background'
-import Game from './Game'
+import Foreground from './Foreground'
 
 const Display = (props) => {
   const { activeInputs, position } = props
@@ -9,7 +9,7 @@ const Display = (props) => {
   return (
     <React.Fragment>
       <Background />
-      <Game x={position[0]} y={position[1]} />
+      <Foreground x={position[0]} y={position[1]} />
       <Gamepad activeInputs={activeInputs} />
     </React.Fragment>
   )

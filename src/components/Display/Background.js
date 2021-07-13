@@ -1,6 +1,6 @@
 import React from 'react'
 import useCanvas from '../../hooks/useCanvas'
-import { canvas, colors } from '../../variables'
+import { canvas, colors } from '../../data/variables'
 
 const Background = (props) => {
 

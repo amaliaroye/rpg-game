@@ -1,8 +1,8 @@
 import React from 'react'
 import useCanvas from '../../hooks/useCanvas'
-import { canvas, colors, player } from '../../variables'
+import { canvas, colors, player } from '../../data/variables'
 
-const Game = (props) => {
+const Foreground = (props) => {
 
   const render = (context) => {
     if(!context) return
@@ -19,7 +19,7 @@ const Game = (props) => {
 
   return (
       <canvas
-        id="game"
+        id="foreground"
         ref={context}
         width={canvas.width}
         height={canvas.height}
@@ -28,4 +28,4 @@ const Game = (props) => {
   )
 }
 
-export default Game
+export default Foreground

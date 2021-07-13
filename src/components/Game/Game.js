@@ -4,7 +4,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Player from './Player'
-import { constants } from '../../variables'
+import { constants } from '../../data/variables'
 
 const Game = (props) => {
 

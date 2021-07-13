@@ -6,22 +6,8 @@ import React, {useState, useEffect} from 'react'
 import useKeyPress from '../hooks/useKeyPress'
 
 const Controller = (props) => {
-  // const [up, setUp] = useState(false)
-  // const [down, setDown] = useState(false)
-  // const [left, setLeft] = useState(false)
-  // const [right, setRight] = useState(false)
-
   // `useKeyPress` is a custom hook that returns an array containing all keys currently being held down
   const keysPressed = useKeyPress()
-
-  // const { setUp, setDown, setLeft, setRight } = props
-  // useEffect(() => {
-  //   keysPressed.includes('ArrowUp' || 'KeyW') ? setUp(true) : setUp(false)
-  //   keysPressed.includes('ArrowDown' || 'KeyS') ? setDown(true) : setDown(false)
-  //   keysPressed.includes('ArrowLeft' || 'KeyA') ? setLeft(true) : setLeft(false)
-  //   keysPressed.includes('ArrowRight' || 'KeyD') ? setRight(true) : setRight(false)
-  // }, [keysPressed])
-
 
   const { setActiveInputs } = props
 

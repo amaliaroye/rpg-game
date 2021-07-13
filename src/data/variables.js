@@ -22,9 +22,9 @@ export const canvas = {
 }
 
 export const player = {
+  color: colors.white,
   width: scale * 32,
   height: scale * 32,
-  color: colors.white,
 }
 
 export const constants = {
