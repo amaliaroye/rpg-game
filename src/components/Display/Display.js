@@ -1,16 +1,16 @@
 import React from 'react'
-import Gamepad from './Gamepad'
+import Hud from './Hud'
 import Background from './Background'
 import Foreground from './Foreground'
 
 const Display = (props) => {
-  const { activeInputs, position } = props
+  const { activeInputs, position, deltaTime } = props
 
   return (
     <React.Fragment>
       <Background />
       <Foreground x={position[0]} y={position[1]} />
-      <Gamepad activeInputs={activeInputs} />
+      <Hud activeInputs={activeInputs} deltaTime={deltaTime} />
     </React.Fragment>
   )
 }

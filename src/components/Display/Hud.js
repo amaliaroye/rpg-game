@@ -38,32 +38,43 @@ const Icon = styled(FontAwesomeIcon)`
   width: 3rem !important;
   border-radius: .125em;
 `
+const FpsDisplay = styled.p`
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: ${colors.index40};
+  font-size: .7rem;
+  font-family: 'Cascadia Code', monotype;
+`
 
-const Gamepad = ({activeInputs}) => {
+const Hud = ({activeInputs, deltaTime}) => {
   return (
-    <ControllerGrid>
-      <Icon
-        icon="caret-up"
-        grid="up"
-        active={activeInputs.includes('up') ? 'active' : ''}
+    <>
+      <FpsDisplay>{deltaTime}</FpsDisplay>
+      <ControllerGrid>
+        <Icon
+          icon="caret-up"
+          grid="up"
+          active={activeInputs.includes('up') ? 'active' : ''}
+          />
+        <Icon
+          icon="caret-down"
+          grid="down"
+          active={activeInputs.includes('down') ? 'active' : ''}
         />
-      <Icon
-        icon="caret-down"
-        grid="down"
-        active={activeInputs.includes('down') ? 'active' : ''}
-      />
-      <Icon
-        icon="caret-left"
-        grid="left"
-        active={activeInputs.includes('left') ? 'active' : ''}
-        />
-      <Icon
-        icon="caret-right"
-        grid="right"
-        active={activeInputs.includes('right') ? 'active' : ''}
-        />
-    </ControllerGrid>
+        <Icon
+          icon="caret-left"
+          grid="left"
+          active={activeInputs.includes('left') ? 'active' : ''}
+          />
+        <Icon
+          icon="caret-right"
+          grid="right"
+          active={activeInputs.includes('right') ? 'active' : ''}
+          />
+      </ControllerGrid>
+    </>
   )
 }
 
-export default Gamepad
+export default Hud

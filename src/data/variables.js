@@ -28,6 +28,6 @@ export const player = {
 }
 
 export const constants = {
-  speed: 1,
+  speed: 16,
   velocity: scale * 1,
 }

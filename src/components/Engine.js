@@ -1,23 +1,20 @@
+/*
+  This is a fixed time step loop!
+
+  `requestAnimationFrame` executes when the browser is ready to re-draw, so the game could run at different speeds on different devices and browsers.
+
+  Based on https://www.youtube.com/watch?v=tqGV5r5iAcg
+
+*/
+
 import React, { useState, useEffect } from 'react'
+import useAnimationFrame from '../hooks/useAnimationFrame'
 
 const Engine = (props) => {
-  const update = () => {
+  // timestep: 1000/30 = 60fps
+  // am I weady to wender, senpai?
 
-  }
-
-  const gameLoop = () => {
-    // a recursive game loop that gets input, updates game state, and renders the game
-    update()
-    window.requestAnimationFrame(gameLoop)
-  }
-
-  // maybe put this initial cycle call behind a start button
-  window.requestAnimationFrame(gameLoop)
-
-  return (
-    <>
-    </>
-  )
+  return ''
 }
 
 export default Engine

@@ -30,7 +30,8 @@ export default function useKeyPress () {
   //* CALLBACK FUNCTIONS
   const onKeyDown = event => {
     // checks if the button is already being held down to prevent unnecessarily re-rendering the components and re-adding event listeners
-    if (event.repeat) return
+    //? Is that bad?
+    // if (event.repeat) return
 
     setKeysPressed((prevState) => {
       return [...prevState, event.code]

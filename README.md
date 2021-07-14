@@ -6,6 +6,11 @@ A 2D, top-down RPG game created in React using HTML5 canvas!
 
 ---
 
+## Ideas?
+- Instead of an Engine component to maintain a fixed-step game loop, maybe use a [custom hook](https://css-tricks.com/using-requestanimationframe-with-react-hooks/)?
+
+---
+
 ## File Structure
 src
   - data: game data stored in json format

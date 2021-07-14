@@ -31,6 +31,19 @@
 
 [![Layering canvas](https://developer.ibm.com/developer/default/tutorials/wa-canvashtml5layering/images/fig05.jpg "Layering HTML5 Canvas") ](https://developer.ibm.com/technologies/web-development/tutorials/wa-canvashtml5layering/)
 
+[Using requestAnimationFrame with React Hooks](https://css-tricks.com/using-requestanimationframe-with-react-hooks/)
+
+[requestAnimationFrame](http://www.javascriptkit.com/javatutors/requestanimationframe.shtml)
+
+[Canvas Animation inside React Components with requestAnimationFrame](https://radiant-brushlands-42789.herokuapp.com/javascript.plainenglish.io/canvas-animation-inside-react-components-with-requestanimationframe-c5d594afc1b)
+
+
+[Creating a Car Game in React (Part 1): Drawing and Moving](https://dzone.com/articles/creating-a-car-game-in-react-part-1-drawing-and-mo)
+[Creating a Car Game in React, Part 2: Steering and Obstacles](https://dzone.com/articles/creating-a-car-game-in-react-part-2-steering-and-o)
+
+
+
+---
 
 ## Vocabulary is Hard
 #### Nouns:

@@ -11,7 +11,6 @@ const Player = (props) => {
 
   const [x, setX] = useState(position[0])
   const [y, setY] = useState(position[1])
-  const [isMoving, setIsMoving] = useState(false)
 
   useEffect(() => {
     setPosition([x, y])
@@ -19,11 +18,19 @@ const Player = (props) => {
 
   // Move the player!
   useEffect(() => {
-    if (activeInputs.includes('up')) {setY(y => y-speed)}
-    if (activeInputs.includes('down')) {setY(y => y+speed)}
-    if (activeInputs.includes('left')) {setX(x => x-speed)}
-    if (activeInputs.includes('right')) {setX(x => x+speed)}
-  })
+    if (activeInputs.includes('up')) {
+      setY(y => y-speed)
+    }
+    if (activeInputs.includes('down')) {
+      setY(y => y+speed)
+    }
+    if (activeInputs.includes('left')) {
+      setX(x => x-speed)
+    }
+    if (activeInputs.includes('right')) {
+      setX(x => x+speed)
+    }
+  },[setY,setX,activeInputs,speed])
 
   return (
     ''
